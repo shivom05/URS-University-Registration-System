@@ -1,1 +1,1 @@
-web: gunicorn URS-University-Registration-System.wsgi --log-file -
+web: gunicorn plasma.wsgi --log-file -
