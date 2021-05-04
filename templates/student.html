@@ -1,0 +1,126 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg py-3 navbar-light bg-light shadow-sm">
+    <div class="container">
+        <a href="index.html" class="navbar-brand">
+            <!-- Logo Image -->
+            <img src="Care.png" width="45" alt="" class="d-inline-block align-middle mr-2">
+            <!-- Logo Text -->
+            <span class="text-uppercase font-weight-bold">oose URS</span>
+        </a>
+
+        <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+            class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+
+        <div id="navbarSupportedContent" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item "><a href="index" class="nav-link">Home <span class="sr-only">(current)</span></a>
+                </li>
+                {% if user.is_authenticated %}
+                <li>Hello,{{user.first_name}}</li>
+               {%endif%}
+                <li class="nav-item"><a href="#" class="nav-link" data-target="">About</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link" >Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <!-- contact -->
+    
+    <<form  method="POST" class="borde  r border-light p-5" action="student"  style="width: 40%; margin-left: 2rem;  margin-top: 1rem; margin-bottom: 2rem; ;">
+        {% csrf_token %}
+            <p class="h4 mb-4 text-center">Enter Student Details</p>
+        
+            
+           
+            <label for="textInput">Student Name</label>
+            <input type="text" id="defaultContactFormName" name="f_name" class="form-control mb-4"  placeholder="First Name"required>
+            <input type="text" id="d_name" class="form-control mb-4"name="f_lname" placeholder="Last Name"required>
+            
+            <label for="textInput">Email</label>
+            <input type="email" id="defaultContactFormEmail" name="email" class="form-control mb-4" placeholder="E-mail"required>
+            
+            <label for="textInput">Age</label>
+            <input type="number" id="defaultContactFromAge" name="age" class="form-control mb-4" placeholder="Age"required>
+            
+            <label for="textInput">Contact no.</label>
+            <input type="tel" id="defaultContactForPhone" name="number" class="form-control mb-4" placeholder="Mobile number"required>    
+            
+            <label for="defaultSelect">Gender</label> 
+            <select name='gender' id="defaultSelect" class="browser-default custom-select mb-4">
+        
+                <option value="1" disabled="" selected="">choose option</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Others">Others</option>
+            </select>
+    
+            <label for="textInput">Father's Name </label>
+            <input type="text" id="defaultContactFormFather_name" name="father" class="form-control mb-4" placeholder="First Name"required>
+            <input type="text" id="defaultContactFormFather_name" name="l_father" class="form-control mb-4" placeholder="Last Name"required>
+        
+            <label for="textInput">Address</label>
+            <input type="text" id="textInput" name="address" class="form-control mb-4" placeholder="Address"required>
+    
+            <label for="textInput">Photo</label>
+            <input type="image" id="defaultContactFromPhoto" name="photo" class="form-control mb-4" placeholder="Upload Photo">
+    
+            <label for="textInput"> Date of birth</label>
+            <input type="date" name='dob' id="defaultContactFormDob" class="browser-default custom-select mb-4"required>
+    
+            <button class="btn btn-info btn-block" type="submit" value="save" data-toggle="modal" data-target="#exampleModal" style="margin-left: 1rem;">save Details</button>
+            
+        </form>
+    <!-- Button trigger modal -->
+    
+     
+    <!-- Modal -->
+
+    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    this link is not working 
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+    <script src="a.js"></script>
+</body>
+</html>
