@@ -25,9 +25,7 @@ SECRET_KEY = '@)d$*@v$#^yy%tb(gf_thrk0i)z!%34a-az$fqd9fh9+u%0#d2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [
-    'urssystem.herokuapp.com'
-    ]
+ALLOWED_HOSTS = ['127.0.0.1','ursystem.herokuapp.com']
 
 
 # Application definition
@@ -167,6 +165,3 @@ MESSAGE_TAGS = {
     messages.WARNING: 'alert-warning',
     messages.ERROR: 'alert-danger',
 }
-
-# Activate Django-Heroku.
-django_heroku.settings(locals())
