@@ -78,22 +78,22 @@ WSGI_APPLICATION = 'plasma.wsgi.application'
 #Database
 #https://docs.djangoproject.com/en/3.0/ref/settings/databases
 
-#DATABASES = {
-    #'default': {
-      #  'ENGINE': 'django.db.backends.sqlite3',
-       # 'NAME': 'mydatabase',
-   # }
-#}
-
 DATABASES = {
     'default': {
-     'ENGINE': 'django.db.backends.postgresql',
-     'NAME': 'URS',
-     'USER': 'postgres',
-     'PASSWORD':'shivom',
-     'HOST': '127.0.0.1',
-    }   
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR,'db.sqlite3'),
+    }
 }
+
+##DATABASES = {
+   ## 'default': {
+   ##   'ENGINE': 'django.db.backends.postgresql',
+   ##   'NAME': 'URS',
+    ##  'USER': 'postgres',
+    ##  'PASSWORD':'shivom',
+    ##  'HOST': '127.0.0.1',
+  ##   }   
+## }
 
 
 
