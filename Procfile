@@ -1,1 +1,1 @@
-web: gunicorn plasma.wsgi --log-file -
+web: gunicorn plasma.wsgi 
